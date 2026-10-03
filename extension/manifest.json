@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Sing Practice (β)",
+  "short_name": "YSP",
+  "version": "0.5.0",
+  "version_name": "0.5.0 beta",
+  "description": "YouTube歌唱練習: キー変更・ABリピート・要確認ポイント・テキスト/手書き注釈・歌詞字幕（個人用）",
+  "minimum_chrome_version": "116",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvTwCIQxWYi3SP9ZmGEPRE0KZylOAMrgRt19A/mZGU83oT3VFPmB7JBROsOlfTYMGlabfIAc5i0vlbXslg8Q/rbvyLqG/HYVhbW5+N3o5sBQNcprz1f2Z7eTJm0Roabs4EmoZeNmWVYCurycS9wTm748SpKAdgLUH7uPaP1AozreKzFaIVqtmqC6CjBKcF2kn0kersLjv9NzBgqVedU/WKXpDUCY2UjRZBu/L31YrcX8GXgr/4meYmccVqKmL0//Ml5Xyrvvy65FaMDVI4DcHeJY/Z3W28/GuriGbLy8EBUFNNvxxfcc8LPf2A2s2/VvDlCd1DSZftZRev+jMZlN1hQIDAQAB",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "src/content/captions-hook.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "src/content/key-guard.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "src/content/loader.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/content/*.js",
+        "src/core/*.js",
+        "src/dsp/*.js",
+        "src/ui/*.js",
+        "src/worklet/*.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
