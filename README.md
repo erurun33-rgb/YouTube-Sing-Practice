@@ -3,7 +3,7 @@
 YouTubeで歌の練習をするための、パソコン版Chrome用拡張機能です。
 キー変更、ABリピート、苦手箇所の記録、テキスト・手書きの注釈、自分で入力する歌詞字幕が使えます。
 
-**[配布ZIPをダウンロード](https://github.com/erurun33-rgb/YouTube-Sing-Practice/releases/download/v0.5.0-beta/ysp-extension-v0.5.0.zip)** · **[最新版の配布ページ](https://github.com/erurun33-rgb/YouTube-Sing-Practice/releases/latest)**
+**[配布ZIPをダウンロード](https://github.com/erurun33-rgb/YouTube-Sing-Practice/releases/download/v0.5.0-beta/ysp-extension-v0.5.0.zip)** · **[最新版の配布ページ](https://github.com/erurun33-rgb/YouTube-Sing-Practice/releases)**
 
 現在の配布版は **0.5.0 beta** です。Chromeウェブストアへの登録は行っていません。インストールにプログラミングやビルド作業は不要です。
 
